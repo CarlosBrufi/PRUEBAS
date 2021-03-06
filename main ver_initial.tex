@@ -1,8 +1,32 @@
-\documentclass{article}
+\documentclass[10pt,a4paper,twoside]{article} % 10pt font size, A4 paper and two-sided margins
 
 \usepackage[spanish]{babel}
-\usepackage[utf8]{inputenc}
-\usepackage{sectsty}
+
+\usepackage{hyperref}
+\usepackage[top=3.5cm,bottom=3.5cm,left=3.7cm,right=3.7cm,columnsep=30pt]{geometry} % Document margins and spacings
+
+\usepackage[utf8]{inputenc} % Required for inputting international characters
+\usepackage[T1]{fontenc} % Output font encoding for international characters
+
+\usepackage{palatino} % Use the Palatino font
+
+\usepackage{microtype} % Improves spacing
+
+\usepackage{multicol} % Required for splitting text into multiple columns
+
+\usepackage[bf,sf,center]{titlesec} % Required for modifying section titles - bold, sans-serif, centered
+
+\usepackage{fancyhdr} % Required for modifying headers and footers
+
+\fancyhead[L]{\textsf{\rightmark}} % Top left header
+\fancyhead[R]{\textsf{\leftmark}} % Top right header
+\renewcommand{\headrulewidth}{1.4pt} % Rule under the header
+\fancyfoot[C]{\textbf{\textsf{\thepage}}} % Bottom center footer
+\renewcommand{\footrulewidth}{1.4pt} % Rule under the footer
+\pagestyle{fancy} % Use the custom headers and footers throughout the document
+
+\newcommand{\entry}[2]{\markboth{#1}{#1}\textbf{#1}\ {#2}}  % Defines the command to print each word on the page, \markboth{}{} prints the first word on the page in the top left header and the last word in the top right
+
 
 % Permite cambios a la tabla de contenidos, como añadir serie de puntos de separación:
 \usepackage{tocloft}
@@ -20,295 +44,493 @@
 % Eliminar numeración de secciones en tabla de contenido:
 \setcounter{secnumdepth}{0}
 
+
+
+
+
+%-------------------------------------------------------------------------------
+%DOCUMENT
+%-------------------------------------------------------------------------------
+
 \begin{document}
 
-\sectionfont{\fontsize{21}{15}\selectfont}
 
-\title{ Diccionario de Economía}
-\author{Maestría en Economía del Colmex, Macro II \\ Alumnos de Enero-Mayo de 2021}
+\title{DICCIONARIO DE ECONOMÍA}
+\author{Maestría en Economía del Colmex \\ Macroeconomía II \\ Alumnos de Enero-Mayo de 2021}
 \date{Enero-Mayo de 2021}
 
 \maketitle
 
 % Color para línea horizontal:
-\definecolor{equipo3}{rgb}{0.33, 0.41, 0.47}
+\definecolor{equipo3}{rgb}{0.59, 0.00, 0.09}
+
+\newpage
 
 % % % % Inicia tabla de contenidos % % % % 
 \begin{center}
 \begin{adjustwidth}{1in}{1in}
-{\color{equipo3} \rule{\linewidth}{0.5mm} }
+{\color{equipo3} \rule{\linewidth}{0.5mm}}
 \vspace{-8mm}
-\renewcommand*\contentsname{Índice por letra inicial}
+\renewcommand*\contentsname{INDICE POR LETRA INICIAL}
 \renewcommand{\cftdot}{}
-\tableofcontents
+
+ \tableofcontents
 {\color{equipo3} \rule{\linewidth}{0.5mm} }
 \end{adjustwidth}
 \end{center}
 % % % % Termina tabla de contenidos % % % % 
 
+%--------------------------------------------------------
+%	SECTION A
+%--------------------------------------------------------
+
+\newpage
 
 \section{A}
-\begin{itemize}
 
-\item Acelerador Financiero: Se refiere a la propiedad de las imperfecciones en el mercado financiero de amplificar los efectos de choques económicos exógenos.
+\begin{multicols}{2}
 
-\item Acertijo de la Prima de Riesgo: Asumiendo una función de utilidad cuadrática, la prima de riesgo establece que la diferencia esperada entre dos retornos risgosos es igual a la aversión relativa al riesgo por la covarianza entre el crecimiento del consumo y la diferencia de los retornos de los activos. No obstante, estudios empíricos muestran que esta igualdad sólo se cumpliría con una aversión relativa al riesgo inverosímilmente alta. El incumplimiento del la prima constituye un acertijo que puede indicar el uso de una érronea forma funcional o de una mala medición de la covarianza.
+\entry{Acelerador Financiero}{Se refiere a la propiedad de las imperfecciones en el mercado financiero de amplificar los efectos de choques económicos exógenos.}
 
-\item Aggregate Demand Externality: Un mecanismo tal que aumentos en la demanda agregada, incrementan la productividad de la economía.
+\entry{Acertijo de la Prima de Riesgo}{Asumiendo una función de utilidad cuadrática, la prima de riesgo establece que la diferencia esperada entre dos retornos risgosos es igual a la aversión relativa al riesgo por la covarianza entre el crecimiento del consumo y la diferencia de los retornos de los activos. No obstante, estudios empíricos muestran que esta igualdad sólo se cumpliría con una aversión relativa al riesgo inverosímilmente alta. El incumplimiento del la prima constituye un acertijo que puede indicar el uso de una érronea forma funcional o de una mala medición de la covarianza.}
 
-\item Aggregate Technology Shocks: Choques al nivel de la productividad de la economia, que son impredecibles, aunque de distribución conocida.
+\entry{Aggregate Demand Externality}{Un mecanismo tal que aumentos en la demanda agregada, incrementan la productividad de la economía.}
 
-\item Ahorro Precautorio: Es el efecto de una utilidad marginal convexa y consiste en el ahorro adicional que realizan los agentes como precaución por las posibles variaciones del ingreso futuro. Esto se debe a que, dado que la utilidad marginal es convexa, el valor esperado de la utilidad marginal del próximo período superará a la utilidad marginal del valor esperado del consumo del próximo período. Además, si se toma la hipótesis del paseo aleatorio, según la cual la utilidad marginal del período actual es igual a la utilidad marginal del valor esperado del consumo del próximo período, se concluirá que el valor esperado de la utilidad marginal del próximo período es mayor a la utilidad marginal del consumo presente. Por tanto, para satisfacer la ecuación de Euler de optimización, se debe aumentar el ahorro reduciendo el consumo presente, lo que aumentará la utilidad marginal hasta que alcance al valor esperado de la utilidad marginal futura. 
+\entry{Aggregate Technology Shocks}{Choques al nivel de la productividad de la economia, que son impredecibles, aunque de distribución conocida.}
 
-\item Arbitrageur: Tipo de inversor que intenta beneficiarse de las ineficiencias del mercado. Estas ineficiencias pueden relacionarse con cualquier aspecto de los mercados, ya sean precios, dividendos o regulaciones. La forma más común de arbitraje es el precio.
+\entry{Ahorro Precautorio}{Es el efecto de una utilidad marginal convexa y consiste en el ahorro adicional que realizan los agentes como precaución por las posibles variaciones del ingreso futuro. Esto se debe a que, dado que la utilidad marginal es convexa, el valor esperado de la utilidad marginal del próximo período superará a la utilidad marginal del valor esperado del consumo del próximo período. Además, si se toma la hipótesis del paseo aleatorio, según la cual la utilidad marginal del período actual es igual a la utilidad marginal del valor esperado del consumo del próximo período, se concluirá que el valor esperado de la utilidad marginal del próximo período es mayor a la utilidad marginal del consumo presente. Por tanto, para satisfacer la ecuación de Euler de optimización, se debe aumentar el ahorro reduciendo el consumo presente, lo que aumentará la utilidad marginal hasta que alcance al valor esperado de la utilidad marginal futura}
 
-\end{itemize}
+\entry{Arbitrageur}{Tipo de inversor que intenta beneficiarse de las ineficiencias del mercado. Estas ineficiencias pueden relacionarse con cualquier aspecto de los mercados, ya sean precios, dividendos o regulaciones. La forma más común de arbitraje es el precio.}
+
+
+\end{multicols}
+
+%-------------------------------------------------------------------------
+%	SECTION B
+%-------------------------------------------------------------------------
+
+\newpage
 
 \section{B}
-\begin{itemize}
 
-\item Bank: Institución financiera con licencia para recibir depósitos y hacer préstamos. Los bancos también pueden proporcionar servicios financieros como gestión de patrimonio, cambio de divisas y cajas de seguridad. Existen varios tipos diferentes de bancos, incluidos bancos minoristas, bancos comerciales o corporativos y bancos de inversión. En la mayoría de los países, los bancos están regulados por el gobierno nacional o el banco central.
+\begin{multicols}{2}
 
-\item Bien: De acuerdo con Aristóteles, se llama bienes a los medios que sirven para la vida y el bienestar de las personas, en otras palabras, que entran en una relación causal con las satisfacciones de deseos humanos. En cambio, Carl Menegr sostuvo que, para que algo alcance la cualidad de bien, se deben cumplir las siguientes cuatro condiciones: 1. La existencia de una necesidad humana. 2. El objeto debe tener cualidades que le permitan mantener una conexión causal con la satisfacción de dicha necesidad. 3. Conocimiento por parte del individuo de esta relación causal. 4. El objeto debe ser asequible de tal modo que pueda ser utilizado de hecho para la satisfacción de la necesidad. Cabe destacar que tanto Menger como Aristóteles aceptaron la existencia de lo que ellos consideraron bienes imaginarios, que son aquellos que no guardan ninguna relación causal con la satisfacción de alguna necesidad pero los individuos creen lo contrario. 
 
-\end{itemize}
+\entry{Bank}{Institución financiera con licencia para recibir depósitos y hacer préstamos. Los bancos también pueden proporcionar servicios financieros como gestión de patrimonio, cambio de divisas y cajas de seguridad. Existen varios tipos diferentes de bancos, incluidos bancos minoristas, bancos comerciales o corporativos y bancos de inversión. En la mayoría de los países, los bancos están regulados por el gobierno nacional o el banco central.}
+
+\entry{Bien}{De acuerdo con Aristóteles, se llama bienes a los medios que sirven para la vida y el bienestar de las personas, en otras palabras, que entran en una relación causal con las satisfacciones de deseos humanos. En cambio, Carl Menegr sostuvo que, para que algo alcance la cualidad de bien, se deben cumplir las siguientes cuatro condiciones: 1. La existencia de una necesidad humana. 2. El objeto debe tener cualidades que le permitan mantener una conexión causal con la satisfacción de dicha necesidad. 3. Conocimiento por parte del individuo de esta relación causal. 4. El objeto debe ser asequible de tal modo que pueda ser utilizado de hecho para la satisfacción de la necesidad. Cabe destacar que tanto Menger como Aristóteles aceptaron la existencia de lo que ellos consideraron bienes imaginarios, que son aquellos que no guardan ninguna relación causal con la satisfacción de alguna necesidad pero los individuos creen lo contrario.}
+
+\end{multicols}
+
+%-------------------------------------------------------------------------
+%	SECTION C
+%-------------------------------------------------------------------------
+
+\newpage
 
 \section{C}
-\begin{itemize}
 
-\item Calibration: Es el proceso mediante el cual, basado en la teoría, se eligen los parámetros de un modelo que se utilizará para proporcionar una respuesta cuantitativa a una pregunta específica. 
+\begin{multicols}{2}
 
-\item Canonical Real Business Cycle Model: Modelo dinámico, con empresas, dueñas de capital, que contratan empleados, que a su vez son dueños de las empresas, consumen y tienen desutilidad por trabajar. En el modelo hay choques de productividad.
+\entry{Calibration}{Es el proceso mediante el cual, basado en la teoría, se eligen los parámetros de un modelo que se utilizará para proporcionar una respuesta cuantitativa a una pregunta específica.}
 
-\item Capital: Es una forma social e histórica de la existencia del valor, en la cual éste se valoriza a partir de la explotación del trabajo ajeno asalariado, es decir, mediante la apropiación de un trabajo ajeno no remunerado. 
+\entry{Canonical Real Business Cycle Model}{Modelo dinámico, con empresas, dueñas de capital, que contratan empleados, que a su vez son dueños de las empresas, consumen y tienen desutilidad por trabajar. En el modelo hay choques de productividad.}
 
-\item Composición Orgánica del Capital: Es la razón entre el valor del capital constante y el del capital variable, es decir, entre el valor de los medios de producción y el de la fuerza de trabajo. La composición orgánica puede cambiar tanto por variaciones en el valor del capital constante o variable, como por cambios en la composición técnica del capital que requieran una mayor cantidad de medios de producción en relación con la fuerza de trabajo o viceversa. Debido al continuo progreso técnico del capitalismo y a la progresiva acumulación del capital, Marx consideró que bajo el capitalismo la composición orgánica tiende a aumentar de manera indefinida. 
+\entry{Capital}{Es una forma social e histórica de la existencia del valor, en la cual éste se valoriza a partir de la explotación del trabajo ajeno asalariado, es decir, mediante la apropiación de un trabajo ajeno no remunerado.}
 
-\item Condición de Transversalidad: Es una condición necesaria para asegurar que las $q$ de Tobin igualen la cantidad con que una unidad marginal de capital contribuye a la función objetivo de la firma. Es, a su vez, una condición necesaria para que la empresa pueda maximizar beneficios, y dicha condición consiste en igualar a cero el límite cuando el tiempo final tiende a infinito del valor presente de la $q$ del período de tiempo final. 
+\entry{Composición Orgánica del Capital}{Es la razón entre el valor del capital constante y el del capital variable, es decir, entre el valor de los medios de producción y el de la fuerza de trabajo. La composición orgánica puede cambiar tanto por variaciones en el valor del capital constante o variable, como por cambios en la composición técnica del capital que requieran una mayor cantidad de medios de producción en relación con la fuerza de trabajo o viceversa. Debido al continuo progreso técnico del capitalismo y a la progresiva acumulación del capital, Marx consideró que bajo el capitalismo la composición orgánica tiende a aumentar de manera indefinida.}
 
-\item Contract: Representación jurídica de una disposición natural del hombre a consensuar con su igual distintos pactos que representen beneficios mutuos. Establece pautas reguladoras de conducta para los agentes económicos, reduciendo los riesgos de las actividades.
+\entry{Condición de Transversalidad}{Es una condición necesaria para asegurar que las $q$ de Tobin igualen la cantidad con que una unidad marginal de capital contribuye a la función objetivo de la firma. Es, a su vez, una condición necesaria para que la empresa pueda maximizar beneficios, y dicha condición consiste en igualar a cero el límite cuando el tiempo final tiende a infinito del valor presente de la $q$ del período de tiempo final.}
 
-\item Costos de Agencia: Son los costos en los que incurre un agente económico cuando su resultado económico depende de las acciones de otro actor económico, sobre las cuales carece de información perfecta, de modo que cuenta con menos información sobre este asunto que la que posee este segundo actor de cuyas acciones depende. De este modo, hay asimetría de información. Estos costos pueden consistir, por ejemplo, en el esfuerzo gastado por el primer agente para monitorear las acciones del segundo agente. 
+\entry{Contract}{Representación jurídica de una disposición natural del hombre a consensuar con su igual distintos pactos que representen beneficios mutuos. Establece pautas reguladoras de conducta para los agentes económicos, reduciendo los riesgos de las actividades.}
 
-\item Costos Internos de Ajuste del Capital: Representa los costos de instalar nuevo capital y de capacitar a los trabajadores para operar las nuevas máquinas. 
+\entry{Costos de Agencia}{Son los costos en los que incurre un agente económico cuando su resultado económico depende de las acciones de otro actor económico, sobre las cuales carece de información perfecta, de modo que cuenta con menos información sobre este asunto que la que posee este segundo actor de cuyas acciones depende. De este modo, hay asimetría de información. Estos costos pueden consistir, por ejemplo, en el esfuerzo gastado por el primer agente para monitorear las acciones del segundo agente.}
 
-\item Crisis: Marx definió a las crisis como soluciones violentas y puramente momentáneas a las contradicciones existentes dentro de un modo de producción e involucran un conflicto entre las fuerzas productivas, las relaciones de producción y la superestructura ideológica vigentes. 
+\entry{Costos Internos de Ajuste del Capital}{Representa los costos de instalar nuevo capital y de capacitar a los trabajadores para operar las nuevas máquinas.}
 
-\end{itemize}
+\entry{Crisis}{Marx definió a las crisis como soluciones violentas y puramente momentáneas a las contradicciones existentes dentro de un modo de producción e involucran un conflicto entre las fuerzas productivas, las relaciones de producción y la superestructura ideológica vigentes.}
+
+\end{multicols}
+
+%-------------------------------------------------------------------------
+%	SECTION D
+%-------------------------------------------------------------------------
+
+\newpage
 
 \section{D}
-\begin{itemize}
 
-\item Déficit fiscal: Situación en la cual una administración pública reporta gastos gastos fiscales superiores a los ingresos fiscales en un periodo determinado de tiempo. 
+\begin{multicols}{2}
 
-\item Deflactor del PIB: Índice de precios que tiene como función calcular la variación de los precios en una economía por medio del Producto Interno Bruto. Se calcula en cada periodo de tiempo realizando la división entre el PIB nominal y el PIB real. 
+\entry{Déficit fiscal}{Situación en la cual una administración pública reporta gastos gastos fiscales superiores a los ingresos fiscales en un periodo determinado de tiempo.} 
 
-\item Depósito a la vista: Depósito bancario que permite al depositante retirar el dinero en cualquier momento y sin preaviso, por contraposición al depósito a plazo. Suele utilizarse como cuenta central para operaciones bancarias del día a día, como ingresos, pagos, domiciliaciones de recibos, transferencias o retiradas de efectivo en cajeros automáticos, entre otras.
+\entry{Deflactor del PIB}{Índice de precios que tiene como función calcular la variación de los precios en una economía por medio del Producto Interno Bruto. Se calcula en cada periodo de tiempo realizando la división entre el PIB nominal y el PIB real.} 
 
-\item Depósito bancario: Forma de ahorro en la cual una entidad financiera custodia el dinero de un cliente recompensandolo mediante una remuneración de acuerdo a la cantidad y al plazo determinado. 
+\entry{Depósito a la vista}{Depósito bancario que permite al depositante retirar el dinero en cualquier momento y sin preaviso, por contraposición al depósito a plazo. Suele utilizarse como cuenta central para operaciones bancarias del día a día, como ingresos, pagos, domiciliaciones de recibos, transferencias o retiradas de efectivo en cajeros automáticos, entre otras.}
 
-\item Desempleo ciclíco: Desempleo provocado por las fluctuaciones de la actividad económica de una economía en cuestión, es decir, es aquel desempleo que está en función del ciclo económico de un país o un territorio en un momento determinado. 
+\entry{Depósito bancario}{Forma de ahorro en la cual una entidad financiera custodia el dinero de un cliente recompensandolo mediante una remuneración de acuerdo a la cantidad y al plazo determinado.}
 
-\item Discriminación de precios: Práctica mediante la cual se cobran distintos precios a diferentes consumidores a cambio de un mismo bien o servicio, a pesar que el costo de proveerlo y/o producirlo es el mismo. 
+\entry{Desempleo ciclíco}{Desempleo provocado por las fluctuaciones de la actividad económica de una economía en cuestión, es decir, es aquel desempleo que está en función del ciclo económico de un país o un territorio en un momento determinado}
 
-\item Dolarización: Proceso mediante el cual un país adopta de forma oficial al dólar (moneda de Estados Unidos) como su moneda de curso legal. 
+\entry{Discriminación de precios}{Práctica mediante la cual se cobran distintos precios a diferentes consumidores a cambio de un mismo bien o servicio, a pesar que el costo de proveerlo y/o producirlo es el mismo.} 
 
+\entry{Dolarización}{Proceso mediante el cual un país adopta de forma oficial al dólar (moneda de Estados Unidos) como su moneda de curso legal.} 
 
-\end{itemize}
+\end{multicols}
+
+%-------------------------------------------------------------------------
+%	SECTION E
+%-------------------------------------------------------------------------
+
+\newpage
 
 \section{E}
-\begin{itemize}
 
-\item Exogenous Assumption: Situación de los agentes que no es resultado de su reacción a las circunstancias, sino que se asume como dada. Por ejemplo: si el modelo supone que hay agentes sin ahorros, estos son pobres por un supuesto exógeno. En cambio si los agentes pueden ahorrar, pero por las circunstancias  a las que los expone el modelo no tienen ahorros, entonces son pobres pero su situación de pobreza se deriva endógeneamente en el modelo.
+\begin{multicols}{2}
 
-\end{itemize}
+\entry{Exogenous Assumption}{Situación de los agentes que no es resultado de su reacción a las circunstancias, sino que se asume como dada. Por ejemplo: si el modelo supone que hay agentes sin ahorros, estos son pobres por un supuesto exógeno. En cambio si los agentes pueden ahorrar, pero por las circunstancias  a las que los expone el modelo no tienen ahorros, entonces son pobres pero su situación de pobreza se deriva endógeneamente en el modelo}.
+
+\entry{\href{https://www.inegi.org.mx/programas/enoe/15ymas/}{ENOE}}{Encuesta nacional de ocupacion y empleo}
+
+\end{multicols}
+
+%-------------------------------------------------------------------------
+%	SECTION F
+%-------------------------------------------------------------------------
+
+\newpage
 
 \section{F}
-\begin{itemize}
 
-\item Feminist Economics: Es el campo que incluye estudios de los roles de género en la economía desde una perspectiva liberadora y trabajo crítico dirigido a parcialidades en el contenido y metodología de la disciplina económica. Desafía análisis económicos que tratan a la mujer como un agente invisible o que sirven para reforzar situaciones de opresión hacia la mujer y genera investigación innovadora diseñada para superar estas fallas. La economía feminista resalta la manera en que arbitrariedades subjetivas que conciernen a temas y métodos aceptables han comprometido la fiabilidad y el enfoque objetivo de la investigación económica y explora alternativas más adecuadas.
+\begin{multicols}{2}
 
-\item Fuerza de trabajo: Es el conjunto de facultades musculares e intelectuales que existen en el cuerpo de las personas y que sirve para producir objetos útiles. La fuerza de trabajo es la fuente de todo valor y bajo las sociedades capitalistas constituye una mercancía más que, sin embargo, conserva la cualidad especial de crear valor mientras es consumida. Las dos condiciones necesarias y suficientes para que la fuerza de trabajo se convierta en mercancía son: 1. La libertad de los individuos de disponer y de vender su fuerza de trabajo, es decir, que no sean esclavos y sean propietarios de sí mismos. 2. Que el individuo carezca de la propiedad de medios de producción indispensables para poder emplear su propia fuerza de trabajo para crear valor, es decir, la incapacidad del individuo para conducir a su fuerza de trabajo de la potencia al acto. Sobre esto, Marx es claro en diferenciar entre fuerza de trabajo y trabajo. Este último constituye la materialización de la potencia ligada a la fuerza de trabajo.De hecho, la fuerza de trabajo sólo puede realizarse en acto mediante su exteriorización en el trabajo humano, si bien, es la fuerza de trabajo y no el trabajo el que se vende como mercancía. 
+\entry{Feminist Economics}{Es el campo que incluye estudios de los roles de género en la economía desde una perspectiva liberadora y trabajo crítico dirigido a parcialidades en el contenido y metodología de la disciplina económica. Desafía análisis económicos que tratan a la mujer como un agente invisible o que sirven para reforzar situaciones de opresión hacia la mujer y genera investigación innovadora diseñada para superar estas fallas. La economía feminista resalta la manera en que arbitrariedades subjetivas que conciernen a temas y métodos aceptables han comprometido la fiabilidad y el enfoque objetivo de la investigación económica y explora alternativas más adecuadas.}
 
-\end{itemize}
+\entry{Fuerza de trabajo}{Es el conjunto de facultades musculares e intelectuales que existen en el cuerpo de las personas y que sirve para producir objetos útiles. La fuerza de trabajo es la fuente de todo valor y bajo las sociedades capitalistas constituye una mercancía más que, sin embargo, conserva la cualidad especial de crear valor mientras es consumida. Las dos condiciones necesarias y suficientes para que la fuerza de trabajo se convierta en mercancía son: 1. La libertad de los individuos de disponer y de vender su fuerza de trabajo, es decir, que no sean esclavos y sean propietarios de sí mismos. 2. Que el individuo carezca de la propiedad de medios de producción indispensables para poder emplear su propia fuerza de trabajo para crear valor, es decir, la incapacidad del individuo para conducir a su fuerza de trabajo de la potencia al acto. Sobre esto, Marx es claro en diferenciar entre fuerza de trabajo y trabajo. Este último constituye la materialización de la potencia ligada a la fuerza de trabajo.De hecho, la fuerza de trabajo sólo puede realizarse en acto mediante su exteriorización en el trabajo humano, si bien, es la fuerza de trabajo y no el trabajo el que se vende como mercancía.}
 
-\section{G}
-\begin{itemize}
+\end{multicols}
 
-\item
+%-------------------------------------------------------------------------
+%	SECTION G
+%-------------------------------------------------------------------------
 
-\end{itemize}
+\newpage
+
+\section*{G}
+
+\begin{multicols}{2}
+
+\entry{}{}
+
+\end{multicols}
+
+%-------------------------------------------------------------------------
+%	SECTION H
+%-------------------------------------------------------------------------
+
+\newpage
 
 \section{H}
-\begin{itemize}
 
-\item Hipótesis del Paseo Aleatorio: Propuesta por Robert Hall, argumenta que el valor esperado del consumo en un período es igual al consumo del período anterior, por lo que el consumo de un período es igual al consumo del período anterior más un término estocástico de error con media cero. Esta hipótesis implica que las variaciones en el consumo son impredecibles y, en particular, que no pueden usarse variaciones predecibles del ingreso para predecir el consumo. 
+\begin{multicols}{2}
 
-\item Hipótesis Ingreso Permanente (HIP): Propuesto por Milton Friedman, plantea que el consumo de las personas es determinado, primordialmente, por su ingreso permanente, el cual es igual a la suma del ingreso que recibirán a lo largo de toda su vida, dividida entre el número de períodos que le quedan al agente de vida. De esta manera los cambios en el ingreso transitorio sólo afectan al consumo en la medida en que afectan al ingreso permanente. 
+\entry{Hipótesis del Paseo Aleatorio}{Propuesta por Robert Hall, argumenta que el valor esperado del consumo en un período es igual al consumo del período anterior, por lo que el consumo de un período es igual al consumo del período anterior más un término estocástico de error con media cero. Esta hipótesis implica que las variaciones en el consumo son impredecibles y, en particular, que no pueden usarse variaciones predecibles del ingreso para predecir el consumo.}
 
-\item Household Heterogeneity: Diferencias entre los hogares, ya sean ex-ante (carcterísticas distintas), o ex-post (situaciones distintas).
+\entry{Hipótesis Ingreso Permanente (HIP)}{Propuesto por Milton Friedman, plantea que el consumo de las personas es determinado, primordialmente, por su ingreso permanente, el cual es igual a la suma del ingreso que recibirán a lo largo de toda su vida, dividida entre el número de períodos que le quedan al agente de vida. De esta manera los cambios en el ingreso transitorio sólo afectan al consumo en la medida en que afectan al ingreso permanente.}
 
-\end{itemize}
+\entry{Household Heterogeneity}{Diferencias entre los hogares, ya sean ex-ante (carcterísticas distintas), o ex-post (situaciones distintas).}
+
+\end{multicols}
+
+%-------------------------------------------------------------------------
+%	SECTION I
+%-------------------------------------------------------------------------
+
+\newpage
 
 \section{I}
-\begin{itemize}
 
-\item: Información Asimétrica: Se presenta cuando un participante en una transacción económica tiene más información relevante para dicha transacción que el otro participante.
+\begin{multicols}{2}
 
-\item Institución financiera: Entidad que interviene en los mercados financieros y cuya actividad consiste en captar o intermediar fondos del público e invertirlos en activos como títulos valores, depósitos bancarios, etc.
+\entry{Información Asimétrica}{Se presenta cuando un participante en una transacción económica tiene más información relevante para dicha transacción que el otro participante.}
 
-\item Intermediario financiero: Instituciones legalmente constituidas que facilitan las transacciones en el mercado financiero.
+\entry{Institución financiera}{Entidad que interviene en los mercados financieros y cuya actividad consiste en captar o intermediar fondos del público e invertirlos en activos como títulos valores, depósitos bancarios, etc.}
 
-\end{itemize}
+\entry{Intermediario financiero}{Instituciones legalmente constituidas que facilitan las transacciones en el mercado financiero.}
 
-\section{J}
-\begin{itemize}
+\end{multicols}
 
-\item
+%-------------------------------------------------------------------------
+%	SECTION J
+%-------------------------------------------------------------------------
 
-\end{itemize}
+\newpage
+
+\section*{J}
+
+\begin{multicols}{2}
+
+\entry{}{}
+
+\end{multicols}
+
+%-------------------------------------------------------------------------
+%	SECTION K
+%-------------------------------------------------------------------------
+
+\newpage
 
 \section{K}
-\begin{itemize}
 
-\item
+\begin{multicols}{2}
 
-\end{itemize}
+\entry{}{}
+
+\end{multicols}
+
+%-------------------------------------------------------------------------
+%	SECTION L
+%-------------------------------------------------------------------------
+
+\newpage
 
 \section{L}
-\begin{itemize}
 
-\item Ley Psicológica Funadamental: De acuerdo con Keynes, podemos establecer que las personas están dispuestas, por regla general y en promedio, a aumentar su consumo a medida que su ingreso crece, aunque no tanto como el crecimiento de su ingreso.De esto se sigue que la propensión marginal a consumir se ubica en un intervalo abierto que va del cero al uno. 
+\begin{multicols}{2}
 
-\end{itemize}
+
+\entry{Ley Psicológica Funadamental}{De acuerdo con Keynes, podemos establecer que las personas están dispuestas, por regla general y en promedio, a aumentar su consumo a medida que su ingreso crece, aunque no tanto como el crecimiento de su ingreso.De esto se sigue que la propensión marginal a consumir se ubica en un intervalo abierto que va del cero al uno.}
+
+\end{multicols}
+
+%-------------------------------------------------------------------------
+%	SECTION M
+%-------------------------------------------------------------------------
+
+\newpage
 
 \section{M}
-\begin{itemize}
 
-\item Macroeconomía: Estudio del comportamiento de los grandes agregados económicos como: el empleo global, la renta nacional, la inversión, el consumo, los precios, los salarios, y los costos, entre otros. El propósito de la teoría macroeconómica, por lo general, consiste en estudiar sistemáticamente las causas que determinan los niveles de la renta nacional y otros agregados, así como la racionalización de los recursos. 
+\begin{multicols}{2}
 
-\item Mercados financieros: Los mercados financieros se pueden definir como los lugares donde se realizan las transacciones de instrumentos financieros. Los mercados son el mecanismo o lugar a través del cual se produce el intercambio de activos financieros y donde se determina su precio.
+\entry{Macroeconomía}{Estudio del comportamiento de los grandes agregados económicos como: el empleo global, la renta nacional, la inversión, el consumo, los precios, los salarios, y los costos, entre otros. El propósito de la teoría macroeconómica, por lo general, consiste en estudiar sistemáticamente las causas que determinan los niveles de la renta nacional y otros agregados, así como la racionalización de los recursos.}
 
-\item Mercancía: Para el marxismo, la mercancía es , en primer lugar, un objeto útil, es decir, que da satisfacción a necesidades humanas, sin importar si éstas brotan del estómago o de la fantasía. En segundo lugar, estos objetos, en vez de ser consumidos por sus productores, son destinados al cambio y, por ello mismo, la mercancía constituye la forma elemental de la riqueza de las sociedades en que impera el régimen de producción capitalista. 
+\entry{Mercados financieros}{Los mercados financieros se pueden definir como los lugares donde se realizan las transacciones de instrumentos financieros. Los mercados son el mecanismo o lugar a través del cual se produce el intercambio de activos financieros y donde se determina su precio.}
 
-\item Moments: Literalmente quiere decir el valor esperado (el promedio en los datos) de una función de una variable observable, es decir E[f(x)]. En general se usa para decir un estadístico empírico.
+\entry{Mercancía}{Para el marxismo, la mercancía es , en primer lugar, un objeto útil, es decir, que da satisfacción a necesidades humanas, sin importar si éstas brotan del estómago o de la fantasía. En segundo lugar, estos objetos, en vez de ser consumidos por sus productores, son destinados al cambio y, por ello mismo, la mercancía constituye la forma elemental de la riqueza de las sociedades en que impera el régimen de producción capitalista.} 
 
-\end{itemize}
+\entry{Moments}{Literalmente quiere decir el valor esperado (el promedio en los datos) de una función de una variable observable, es decir E[f(x)]. En general se usa para decir un estadístico empírico.}
+
+\end{multicols}
+
+%-------------------------------------------------------------------------
+%	SECTION N
+%-------------------------------------------------------------------------
+
+\newpage
 
 \section{N}
-\begin{itemize}
 
-\item
+\begin{multicols}{2}
 
-\end{itemize}
 
-\section{O}
-\begin{itemize}
 
-\item
+\end{multicols}
 
-\end{itemize}
+%-------------------------------------------------------------------------
+%	SECTION O
+%-------------------------------------------------------------------------
+
+\newpage
+
+\section*{O}
+
+\begin{multicols}{2}
+
+
+
+\end{multicols}
+
+%-------------------------------------------------------------------------
+%	SECTION P
+%-------------------------------------------------------------------------
+
+\newpage
 
 \section{P}
-\begin{itemize}
 
-\item Pánico bancario: Es un fenómeno social que ocurre cuando una gran cantidad de acreedores exigen  a un banco la devolución de sus fondos de tal modo que el banco no cuenta con la liquidez suficiente para satisfacer tales demandas a cabalidad. Esto es consecuencia de que las instituciones financieras realizan inversiones de largo plazo pero permiten a sus acreedores y depositantes acceder a sus fondos antes de que sus inversiones maduren. 
+\begin{multicols}{2}
 
-\item Pledgeable: Una promesa o acuerdo formal o solemne, especialmente para hacer o abstenerse de hacer algo. Colateral para el pago de una deuda o el cumplimiento de una obligación
+\entry{Pánico bancario}{Es un fenómeno social que ocurre cuando una gran cantidad de acreedores exigen  a un banco la devolución de sus fondos de tal modo que el banco no cuenta con la liquidez suficiente para satisfacer tales demandas a cabalidad. Esto es consecuencia de que las instituciones financieras realizan inversiones de largo plazo pero permiten a sus acreedores y depositantes acceder a sus fondos antes de que sus inversiones maduren.}
 
-\item Plusvalía: Es el valor producido por el trabajador que excede al valor de su fuerza de trabajo y que es apropiado por el capitalista. Representa el valor social del tiempo de trabajo no pagado al trabajador.
+\entry{Pledgeable}{Una promesa o acuerdo formal o solemne, especialmente para hacer o abstenerse de hacer algo. Colateral para el pago de una deuda o el cumplimiento de una obligación.}
 
-\item Precio de Producción: Es el precio que permite obtener a los productores, con la venta de sus mercancías, la tasa media de ganancia. 
+\entry{Plusvalía}{Es el valor producido por el trabajador que excede al valor de su fuerza de trabajo y que es apropiado por el capitalista. Representa el valor social del tiempo de trabajo no pagado al trabajador.}
 
-\item Problemas de Agencia: Problema de información asimétrica  en la que  un agente  depende de la elección de otro, el qual puede tener incentivos a no seguir una conducta optimizadora para el primero.
+\entry{Políticas ciegas ante el género}{Aquellas políticas que, aunque parecen neutrales, están sesgadas a favor de lo masculino, pues no toman en cuenta las relaciones de género. No reconocen la desigualdad existente entre hombres y mujeres y, por tanto, tienden a excluir a las mujeres de los beneficios y recursos de las intervenciones.}
 
-\end{itemize}
+\entry{Políticas sensibles al género}{Aquellas políticas que toman en cuenta que tanto mujeres como hombres son afectados por las intervenciones pero de manera diferente y a menudo desigual. Reconocen que mujeres y hombres no son iguales y pueden tener distintas necesidades, prioridades e intereses.}
+
+\entry{Precio de Producción}{Es el precio que permite obtener a los productores, con la venta de sus mercancías, la tasa media de ganancia.} 
+
+\entry{Problemas de Agencia}{Problema de información asimétrica  en la que  un agente  depende de la elección de otro, el qual puede tener incentivos a no seguir una conducta optimizadora para el primero.}
+
+\end{multicols}
+
+%-------------------------------------------------------------------------
+%	SECTION Q
+%-------------------------------------------------------------------------
+
+\newpage
 
 \section{Q}
-\begin{itemize}
 
-\item $q$ de Tobin: Es la razón entre el valor de mercado del capital y su costo de reemplazo. Si se cumple la condición de transversalidad, es también igual al valor presente del ingreso marginal futuro de una unidad marginal de capital. 
+\begin{multicols}{2}
 
-\end{itemize}
+\entry{$q$ de Tobin}{Es la razón entre el valor de mercado del capital y su costo de reemplazo. Si se cumple la condición de transversalidad, es también igual al valor presente del ingreso marginal futuro de una unidad marginal de capital.}
+
+\end{multicols}
+
+%-------------------------------------------------------------------------
+%	SECTION R
+%-------------------------------------------------------------------------
+
+\newpage
 
 \section{R}
-\begin{itemize}
 
-\item Representative Agent Economy: Economía en la que sólo hay un agente que produce, consume y ahorra, que es equivalente a una donde hay una multitud de agentes, pero todos son iguales. Ie. No hay heterogeneidad.
+\begin{multicols}{2}
 
-\item Riesgo de impago: También conocido como riesgo de default financiero o riesgo de suspensión de pagos, surge cuando una persona u organización no puede afrontar el pago de una deuda cuando llega el vencimiento. Se produce cuando un deudor no puede cumplir con la obligación legal de pagar su deuda.
+\entry{Representative Agent Economy}{Economía en la que sólo hay un agente que produce, consume y ahorra, que es equivalente a una donde hay una multitud de agentes, pero todos son iguales. Ie. No hay heterogeneidad.}
 
-\item Riqueza: De acuerdo con Thomas Malthus, riqueza son todos aquellos objetos económicos materiales que son necesarios, útiles o agradables para las personas, de modo que excluye a muchos bienes inmateriales que hoy serían considerados como riqueza, entre ellos, el capital humano y la propiedad intelectual. Asimismo, sólo reconoce como riqueza a bienes económicos, es decir, bienes escasos excluibles, con lo que Malthus excluye al aire, a la luz y a otros más de su definición. En concordancia con esta definición, Stuart Mill define a la riqueza como el conjunto de cosas útiles o agradables que poseen valor de cambio, de tal manera que igualmente le niega el título de riqueza a los objetos que pueden obtenerse en la cantidad deseada sin trabajo o sacrificio alguno. Además, Mill ya no establece la restricción de que sólo los bienes materiales pueden constituir riqueza.
+\entry{Riesgo de impago}{También conocido como riesgo de default financiero o riesgo de suspensión de pagos, surge cuando una persona u organización no puede afrontar el pago de una deuda cuando llega el vencimiento. Se produce cuando un deudor no puede cumplir con la obligación legal de pagar su deuda.}
 
-\item Risk (Finance): Probabilidad de ocurrencia de un evento que tenga consecuencias financieras negativas para una organización. Riesgo de que una empresa no pueda cumplir con sus obligaciones de pagar sus deudas; cuanta más deuda tenga una empresa, mayor será el riesgo financiero potencial.
+\entry{Riqueza}{De acuerdo con Thomas Malthus, riqueza son todos aquellos objetos económicos materiales que son necesarios, útiles o agradables para las personas, de modo que excluye a muchos bienes inmateriales que hoy serían considerados como riqueza, entre ellos, el capital humano y la propiedad intelectual. Asimismo, sólo reconoce como riqueza a bienes económicos, es decir, bienes escasos excluibles, con lo que Malthus excluye al aire, a la luz y a otros más de su definición. En concordancia con esta definición, Stuart Mill define a la riqueza como el conjunto de cosas útiles o agradables que poseen valor de cambio, de tal manera que igualmente le niega el título de riqueza a los objetos que pueden obtenerse en la cantidad deseada sin trabajo o sacrificio alguno. Además, Mill ya no establece la restricción de que sólo los bienes materiales pueden constituir riqueza.}
 
-\item Riesgo Moral: Surge cuando una de las partes que firman un contrato cambia su comportamiento en respuesta a ese contrato y, de este modo, transmite los costos de ese cambio de comportamiento a la otra parte.
+\entry{Risk (Finance)}{Probabilidad de ocurrencia de un evento que tenga consecuencias financieras negativas para una organización. Riesgo de que una empresa no pueda cumplir con sus obligaciones de pagar sus deudas; cuanta más deuda tenga una empresa, mayor será el riesgo financiero potencial.}
 
-\end{itemize}
+\entry{Riesgo Moral}{Surge cuando una de las partes que firman un contrato cambia su comportamiento en respuesta a ese contrato y, de este modo, transmite los costos de ese cambio de comportamiento a la otra parte.}
+
+\end{multicols}
+
+%-------------------------------------------------------------------------
+%	SECTION S
+%-------------------------------------------------------------------------
+
+\newpage
 
 \section{S}
-\begin{itemize}
 
-\item Selección Adversa: Situación en la cual se produce información asimétrica en torno de bienes o consumidores de alta calidad, que tienen que salir de ciertas transacciones porque no pueden demostrar su calidad.
+\begin{multicols}{2}
 
-\item Shock Amplification Mechanisms: Mecanísmos que agrandan el efecto de un choque.
+\entry{Selección Adversa}{Situación en la cual se produce información asimétrica en torno de bienes o consumidores de alta calidad, que tienen que salir de ciertas transacciones porque no pueden demostrar su calidad}
 
-\item Shock Propagation Mechanisms: Mecanismos que transmiten un choque de un mercado a otro, o de un periodo a otro.
+\entry{Shock Amplification Mechanisms:}{Mecanísmos que agrandan el efecto de un choque.}
 
-\end{itemize}
+
+\end{multicols}
+
+%-------------------------------------------------------------------------
+%	SECTION T
+%-------------------------------------------------------------------------
+
+\newpage
 
 \section{T}
-\begin{itemize}
 
-\item Tasa de Interés: Este concepto ha sido definido de diferentes formas por distintas corrientes del pensamiento económico y por distintos autores. Senior la definía como la recompensa por la abstinencia, es decir, como la gratificación de la abstención del consumo presente y Alfred Marshall lo hizo de manera similar, afirmando que se trataba de la recompensa por esperar cierto tiempo hasta recuperar lo prestado. De acuerdo a estas definiciones, la tasa de interés es el precio que equilibra la oferta de ahorros con su demanda. Por otra parte, Marx lo definió como el precio del dinero en tanto capital, es decir, en tanto valor que se valoriza y, por consiguiente, representa la ganancia por la simple posesión del capital. Asimismo, en constraste con todas las definiciones anteriores, para Keynes la tasa de interés constituye la recompensa por privarse de liquidez durante un período determinado y, en consecuencia, es el precio que equilibra el deseo de conservar la riqueza em forma líquida con la cantidad disponible de liquidez. 
+\begin{multicols}{2}
 
-\item Teoría Keynesiana del Consumo: Propuesta por Keynes, sostiene que el principal determinante del consumo es el ingreso actual y que la proporción destinada al consumo es decreciente con respecto al nvel absoluto del ingreso. Además, Keynes reconoce que existen otros factores objetivos que afectan al consumo, pero que tienen menor importancia, y destaca seis: 1)Cambios en los salarios; 2)cambios en la diferencia entre ingreso e ingreso neto; 3) cambios imprevistos en el valor de los bienes de capital; 4)Cambios en la tasa de interés y en el poder adquisitivo del dinero; 5)cambios en la política fiscal; y 6) cambios en el ingreso futuro esperado con relación al ingreso actual. Este último punto deja ver que Keynes ya tomaba en cuenta elementos que después constituirían la Hipótesis del ingreso Permanente, no obstante, Keynes consideraba que, aunque este punto era importante en la determinación del consumo de los individuos, a nivel agregado sería irrelevante. 
+\entry{Tasa de Interés}{Este concepto ha sido definido de diferentes formas por distintas corrientes del pensamiento económico y por distintos autores. Senior la definía como la recompensa por la abstinencia, es decir, como la gratificación de la abstención del consumo presente y Alfred Marshall lo hizo de manera similar, afirmando que se trataba de la recompensa por esperar cierto tiempo hasta recuperar lo prestado. De acuerdo a estas definiciones, la tasa de interés es el precio que equilibra la oferta de ahorros con su demanda. Por otra parte, Marx lo definió como el precio del dinero en tanto capital, es decir, en tanto valor que se valoriza y, por consiguiente, representa la ganancia por la simple posesión del capital. Asimismo, en constraste con todas las definiciones anteriores, para Keynes la tasa de interés constituye la recompensa por privarse de liquidez durante un período determinado y, en consecuencia, es el precio que equilibra el deseo de conservar la riqueza em forma líquida con la cantidad disponible de liquidez.} 
 
-\end{itemize}
+\entry{Teoría Keynesiana del Consumo}{Propuesta por Keynes, sostiene que el principal determinante del consumo es el ingreso actual y que la proporción destinada al consumo es decreciente con respecto al nvel absoluto del ingreso. Además, Keynes reconoce que existen otros factores objetivos que afectan al consumo, pero que tienen menor importancia, y destaca seis: 1)Cambios en los salarios; 2)cambios en la diferencia entre ingreso e ingreso neto; 3) cambios imprevistos en el valor de los bienes de capital; 4)Cambios en la tasa de interés y en el poder adquisitivo del dinero; 5)cambios en la política fiscal; y 6) cambios en el ingreso futuro esperado con relación al ingreso actual. Este último punto deja ver que Keynes ya tomaba en cuenta elementos que después constituirían la Hipótesis del ingreso Permanente, no obstante, Keynes consideraba que, aunque este punto era importante en la determinación del consumo de los individuos, a nivel agregado sería irrelevante.}
+
+\end{multicols}
+
+%-------------------------------------------------------------------------
+%	SECTION U
+%-------------------------------------------------------------------------
+
+\newpage
 
 \section{U}
-\begin{itemize}
 
-\item Uninsurable Idiosyncratic Earnings Shocks: Choques al ingreso individual, que, debido típicamente a la posiblidad de "riesgo moral", no son asegurables, es decir, no es posible que los agentes compren un seguro que los proteja de ellos.
+\begin{multicols}{2}
 
-\item Utilidad: De acuerdo a Carl Menger, la utilidad es la capacidad que tiene un objeto de servir para satisfacer necesidades humanas y, por ende, es un presupuesto de la cualidad de los bienes. Incluso los bienes no económicos, es decir, aquellos que no son escasos, pueden ser útiles. La economía neoclásica, posteriormente, ajustaría la definición, recalcando que utilidad es la capacidad de los objetos para satisfacer deseos humanos, de modo que el concepto no presupone elementos objetivos, sino que es meramente subjetivo. De este modo, no tiene sentido el concepto aristotélico de bienes imaginarios, que también recoge Menger, ya que, aun en el caso de que un individuo crea falsamente que cierto objeto puede satisfacer una necesidad suya, como, por ejemplo, procurarle salud, dicho objeto le procura utilidad al individuo.
+\entry{Uninsurable Idiosyncratic Earnings Shocks}{Choques al ingreso individual, que, debido típicamente a la posiblidad de "riesgo moral", no son asegurables, es decir, no es posible que los agentes compren un seguro que los proteja de ellos.}
 
-\end{itemize}
+\entry{Utilidad}{De acuerdo a Carl Menger, la utilidad es la capacidad que tiene un objeto de servir para satisfacer necesidades humanas y, por ende, es un presupuesto de la cualidad de los bienes. Incluso los bienes no económicos, es decir, aquellos que no son escasos, pueden ser útiles. La economía neoclásica, posteriormente, ajustaría la definición, recalcando que utilidad es la capacidad de los objetos para satisfacer deseos humanos, de modo que el concepto no presupone elementos objetivos, sino que es meramente subjetivo. De este modo, no tiene sentido el concepto aristotélico de bienes imaginarios, que también recoge Menger, ya que, aun en el caso de que un individuo crea falsamente que cierto objeto puede satisfacer una necesidad suya, como, por ejemplo, procurarle salud, dicho objeto le procura utilidad al individuo.}
+
+\end{multicols}
+
+%-------------------------------------------------------------------------
+%	SECTION V
+%-------------------------------------------------------------------------
+
+\newpage
 
 \section{V}
-\begin{itemize}
 
-\item Valores gubernamentales: Títulos de crédito emitidos por el Gobierno Federal en el mercado de dinero con la doble finalidad de allegarse recursos y regular la oferta de circulante. Son títulos de crédito que se colocan en una oferta primaria al público ahorrador. Se caracterizan por su liquidez en el mercado secundario. Los hay de descuento y los que se colocan a la par, sobre o bajo par. Son títulos al portador por los cuales el Gobierno Federal se obliga a pagar una suma fija de dinero en fecha determinada. Son emitidos por conducto de la SHCP y el Banco de México que es el agente financiero encargado de su colocación y redención. Los valores gubernamentales pueden considerarse como un instrumento de política monetaria para el control de la liquidez del mercado financiero a través de su compraventa (operaciones de mercado abierto). Los diferentes tipos de valor que se originan en el proceso de compra-venta son: valor nominal, valor de colocación y valor de mercado.
+\begin{multicols}{2}
 
-\end{itemize}
+\entry{Valores gubernamentales}{Títulos de crédito emitidos por el Gobierno Federal en el mercado de dinero con la doble finalidad de allegarse recursos y regular la oferta de circulante. Son títulos de crédito que se colocan en una oferta primaria al público ahorrador. Se caracterizan por su liquidez en el mercado secundario. Los hay de descuento y los que se colocan a la par, sobre o bajo par. Son títulos al portador por los cuales el Gobierno Federal se obliga a pagar una suma fija de dinero en fecha determinada. Son emitidos por conducto de la SHCP y el Banco de México que es el agente financiero encargado de su colocación y redención. Los valores gubernamentales pueden considerarse como un instrumento de política monetaria para el control de la liquidez del mercado financiero a través de su compraventa (operaciones de mercado abierto). Los diferentes tipos de valor que se originan en el proceso de compra-venta son: valor nominal, valor de colocación y valor de mercado.}
+
+\end{multicols}
+
+%-------------------------------------------------------------------------
+%	SECTION W
+%-------------------------------------------------------------------------
+
+\newpage
 
 \section{W}
-\begin{itemize}
 
-\item
+\begin{multicols}{2}
 
-\end{itemize}
+\entry{}{}
+
+\end{multicols}
+
+%-------------------------------------------------------------------------
+%	SECTION X
+%-------------------------------------------------------------------------
+
+\newpage
 
 \section{X}
-\begin{itemize}
 
-\item
+\begin{multicols}{2}
 
-\end{itemize}
+\entry{}{}
+
+\end{multicols}
+
+%-------------------------------------------------------------------------
+%	SECTION Y
+%-------------------------------------------------------------------------
+
+\newpage
 
 \section{Y}
-\begin{itemize}
 
-\item
+\begin{multicols}{2}
 
-\end{itemize}
+\entry{}{}
+
+\end{multicols}
+
+
+%-------------------------------------------------------------------------
+%	SECTION Z
+%-------------------------------------------------------------------------
+
+\newpage
 
 \section{Z}
-\begin{itemize}
 
-\item
+\begin{multicols}{2}
 
-\end{itemize}
+\entry{}{}
+
+\end{multicols}
 
 \end{document}
-
